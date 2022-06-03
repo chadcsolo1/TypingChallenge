@@ -1,0 +1,27 @@
+.container {
+    margin: auto;
+    text-align: center;
+    width: 50rem;
+    border-style: solid;
+}
+
+.input {
+
+    width: 15rem;
+    height: 2rem;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+
+    color: red;
+    font-weight: bold;
+}
+
+.pending {
+
+    color: gray;
+}

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="column is-centered">
+    <div class="Box column is-one-third">
+
+      <h1 class="title has-text-centered">Typing Challenge</h1>
+
+      <p class="has-text-centered">
+        <!-- in the span element here we use property binding to set a value for the class property/attribute of the span element within the parentheses we have
+              a function on the class component.ts file that determines based on a condition what the class property of the span elements value will be -->
+        <span [class]="compare(letter, enteredText[i])"
+          *ngFor="let letter of randomText.split('') let i = index;">{{letter}}</span>
+      </p>
+
+      <div class="field">
+        <!-- In the input element we are displaying event binding so in the parentheses we have (input) which is the event of the user typing in the input element and 
+            we give this a value determined by a function onInput() where we essentially determine what the value of the input element is -->
+        <input class="input" (input)="onInput($any($event.target).value)" />
+      </div>
+
+      <div class="box has-text-centered">
+        <h1 class="title" *ngIf="randomText === enteredText">Success!</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
